@@ -69,3 +69,16 @@ h5 {
   border-radius: 10%;
   padding: 10px;
 }
+#about-us{
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+#about-us .content{
+  padding: 40px 50px 70px;
+  max-width: 100%;
+  background-color: orange;
+}
+.d-flex{
+  display: flex !important;
+}
