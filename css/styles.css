@@ -43,7 +43,7 @@ h5 {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment:fixed;
 }
 .text a{
   font-size: 20px;
@@ -52,8 +52,8 @@ h5 {
 .button{
   border-radius: 10px;
 }
-.slider{
-  padding-top: 50px;
+.controls-top{
+  background: transparent;
 }
 .card-title{
   text-align: center;
@@ -64,4 +64,8 @@ h5 {
   color: rgb(5, 172, 5);
   padding-top: 40px;
   font-weight: bolder;
+}
+.col-md-4{
+  border-radius: 10%;
+  padding: 10px;
 }
