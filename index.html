@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pizza Deliciosa</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/mdb.min.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -12,8 +13,27 @@
 </head>
 <body>
   <header>
-    <div class="view">
+    <div class="view landing">
       <div id="overlay">
+          <nav class="navbar navbar-expand-md bg-success navbar-dark fixed-top">
+            <a class="navbar-brand" href="#">PIZZA DELICIOSA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse align-items-center" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#about-us">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Our Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Our Varieties</a>
+                </li>    
+              </ul>
+            </div>  
+          </nav>
           <div class="mask rgba-black-light align-items-center">
             <div class="container" id="head">
               <div class="row">
@@ -33,23 +53,23 @@
   <div class="controls-top text-center"> 
     <h2>About Us</h2>
   </div>
-  <div class="container section" id="about-us">
-    <div class="col-sm-12 d-flex flex-xs-column">
-      <div class="col-sm-6 align-items-center">
-        <div class="content">
-          <h3>Who Are We?</h3>
-          <p>Started our journey with Dominos and then Pizza-Hut, gaining experience from india 
-            and abroad and we opened our first outlet in 2009 near suddhowala chowk Dehradun. With 
-            the passage of time we build our team and now one more outlet is in operation near 
-            petroleum university bidholi. Provided vast variety of Pizza, Burger, Desserts and 
-            Beverages. we are revolutionizing the QSR industry and our main moto is "Eat Hygenic & 
-            Helathy, Always be Happy & Wealthy" for all pizza lovers.</p>
+  <div class="row">
+    <div class="container-fluid section" id="about-us">
+      <div class="col-sm-12 d-flex flex-xs-column">
+        <div class="col-sm-7 img text-center about-img">
+            <div class="about-pic">
+              <img src="images/vid.gif" alt="about-us">
+            </div>
         </div>
-      </div>
-      <div class="col-sm-6 img text-center about-img">
-          <div class="border-on">
-            <img src="images/aboutus.png" alt="about-us">
+        <div class="col-sm-5 align-items-center">
+          <div class="content">
+            <h3>Who Are We?</h3>
+            <p>Pizza Deliciosa Restaurants that has been in pizza business for over 10years now and offers a very unique atmosphere for customers in 
+              addition to home delivery services for all pizza orders and we know that pizza is a family meal 
+              which popular around the world and that has resulted in a large number of chains of pizza 
+              restaurants but non of them is the best than Pizza Deliciosa.</p>
           </div>
+        </div>
       </div>
     </div>
   </div>
@@ -153,8 +173,9 @@
     </div>
   </div>
   <script src="js/mdb.min.js"></script>
-  <script src="js/jquery-3.4.1.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

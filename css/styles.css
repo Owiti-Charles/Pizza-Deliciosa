@@ -2,7 +2,13 @@ html,
 body,
 header,
 .view {
+  overflow-x: hidden;
   height: 100%;
+  
+}
+body{
+  margin: 0;
+  padding: 0;
 }
 @import url('https://fonts.googleapis.com/css?family=Cormorant|Eagle+Lake|El+Messiri|Quattrocento&display=swap');
 @media (max-width: 740px) {
@@ -21,22 +27,16 @@ h1 {
   font-size: 60px;
   text-shadow: 2px 2px 5px rgb(8, 156, 5);
 }
-.border-on {
-  height: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 h5 {
   letter-spacing: 3px;
 }
 #overlay{
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   height: 100%;
   width: 100%;
   position: absolute;
+  overflow-x: hidden;
 }
 .hr-light {
   border-top: 3px solid #fff;
@@ -45,13 +45,31 @@ h5 {
 #head{
   padding-top: 10%;
 }
+.navbar{
+  overflow-x: hidden;
+}
+.navbar-brand{
+  margin-right: 25%;
+  font-weight:800;
+}
+.nav-item a{
+  padding-right: 30px;
+  padding-left: 30px;
+  /* padding: 10px; */
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .view{
-  background-image: url("../images/pizzabg.jpg");
+  background-image: url("../images/slider2.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment:fixed;
   padding-bottom: 20px;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
 .text a{
   font-size: 20px;
@@ -59,9 +77,6 @@ h5 {
 }
 .button{
   border-radius: 10px;
-}
-.controls-top{
-  background: transparent;
 }
 .card-title{
   text-align: center;
@@ -71,6 +86,7 @@ h5 {
 .controls-top h2{
   color: rgb(5, 172, 5);
   padding-top: 40px;
+  padding-bottom: 20px;
   font-weight: bolder;
 }
 .col-md-4{
@@ -78,18 +94,29 @@ h5 {
   padding: 10px;
 }
 #about-us{
-  min-height: 80vh;
-  display: flex;
+  min-height: 70vh;
+  /* display: flex; */
   align-items: center;
+  /* background-image: url("../images/slider2.jpg"); */
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
 }
-#about-us .img {
-  z-index: 9;
-
+.about-pic {
+  background-color: #ffa500;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
 }
 #about-us .content{
-  padding: 40px 50px 70px;
-  max-width: 100%;
-  background-color: orange;
+  padding: 65px 50px 85px;
+  width: 100%;
+  background-color: #ffa500;
+  float:right;
+  text-align: justify;
+  overflow-x: hidden;
 }
 .d-flex{
   display: flex !important;
@@ -101,8 +128,8 @@ h5 {
   left: 50%;
   top: 90%;
   margin-left:-20px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-image: url("../images/white-arrow-png-41944-Windows.ico");
   background-size: contain;
 }
@@ -138,4 +165,13 @@ h5 {
 #about-us .content {
   padding: 20px 30px 40px;
 }
+.about-pic img{
+  width: 94%;
+}
+/* .col-sm-7 {
+  width: 58.33333333%;
+}
+.col-sm-5 {
+  width: 41.33333333%;
+} */
 }
