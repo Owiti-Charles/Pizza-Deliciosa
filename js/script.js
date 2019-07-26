@@ -30,21 +30,21 @@ $(document).ready(function(){
    $("#pizzacrust").append("Pizza Crust - "+newOrder.crust);
    $("#pizzatopping").append("Pizza Toppings - "+newOrder.topping);
 
-
    switch(psize){
-     case "large":
-        price = 1200;
-        console.log(price);
-      break;
-      case "medium":
-        price = 850;
-        console.log("The price is "+price);
-      break;
-      case "small":
-        price = 600;
-        console.log(price);
-      default:
-        console.log("error");
+    case "large":
+       price = 1200;
+       console.log(price);
+     break;
+     case "medium":
+       price = 850;
+       console.log("The price is "+price);
+     break;
+     case "small":
+       price = 600;
+       console.log(price);
+     default:
+       console.log("error");
+   
      
    }
    
