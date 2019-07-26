@@ -7,6 +7,7 @@
   <title>Pizza Deliciosa</title>
   <link rel="stylesheet" href="css/mdb.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/wickedcss.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
 
@@ -38,10 +39,9 @@
             <div class="container" id="head">
               <div class="row">
                 <div class="col-md-12 mb-4 white-text text-center text">
-                  <h1 class="h1-reponsive gold-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown" data-wow-delay="0.3s"><strong>Pizza Deliciosa</strong></h1>
-                  <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
-                  <h5 class="text-uppercase mb-4 gold-text wow fadeInDown" data-wow-delay="0.4s"><strong>Best Pizza Shop in Town!</strong></h5>
-                  <a class="btn btn-green wow fadeInDown button" >Order Now!</a>
+                  <h1 class="h1-reponsive gold-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 pulse"><strong>Pizza Deliciosa</strong></h1>
+                  <h5 class="text-uppercase mb-4 gold-text floater"><strong>Best Pizza Shop in Town!</strong></h5>
+                  <a class="btn btn-green button floater" >Order Now!</a>
                 </div>
               </div>
             </div>
@@ -84,7 +84,6 @@
             <img class="card-img-top" src="images/pizza1.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Chicken Tikka</h5>
-              <!-- <a class="btn btn-primary">Button</a> -->
             </div>
           </div>
         </div>
@@ -93,8 +92,7 @@
           <div class="card mb-2">
             <img class="card-img-top" src="images/pizza2.jpg" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">Peri Peri</h5>
-              <!-- <a class="btn btn-primary">Button</a> -->
+              <h5 class="card-title">PeriPeri Pizza</h5>
             </div>
           </div>
         </div>
@@ -104,7 +102,6 @@
             <img class="card-img-top" src="images/pizza3.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Raspberry Dessert Pizza</h5>
-              <!-- <a class="btn btn-primary">Button</a> -->
             </div>
           </div>
         </div>
@@ -115,7 +112,6 @@
             <img class="card-img-top" src="images/pizza4.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Chicken Alfredo Pizza</h5>
-              <!-- <a class="btn btn-primary">Button</a> -->
             </div>
           </div>
         </div>
@@ -124,7 +120,6 @@
             <img class="card-img-top" src="images/pizza5.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Sunchoke Pizza</h5>
-              <!-- <a class="btn btn-primary">Button</a> -->
             </div>
           </div>
         </div>
@@ -133,39 +128,7 @@
           <div class="card mb-2">
             <img class="card-img-top" src="images/pizza6.jpg" alt="Card image cap">
             <div class="card-body">
-              <h4 class="card-title"> Buffalo Chicken Pizza Sticks</h4>
-              <!-- <a class="btn btn-primary">Button</a> -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="col-md-4">
-          <div class="card mb-2">
-            <img class="card-img-top" src="images/pizza7.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Baked Potato Pizza</h5>
-              <!-- <a class="btn btn-primary">Button</a> -->
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-2">
-            <img class="card-img-top" src="images/pizza8.jpg" alt="Card image cap">
-            <div class="card-body bg-trsnsparent">
-              <h5 class="card-title">Avocado Pizza</h5>
-              <!-- <a class="btn btn-primary">Button</a> -->
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-2">
-            <img class="card-img-top" src="images/pizza9.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Burrata Pizza</h5>
-              <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                card's content.</p>
-              <a class="btn btn-primary">Button</a> -->
+              <h5 class="card-title"> Buffalo Chicken Pizza Sticks</h5>
             </div>
           </div>
         </div>
@@ -178,20 +141,45 @@
         <h2>Order Here</h2>
       </div>
       <h2>Order your pizza here and we will deliver it to you!</h2>
-      <div class="col-sm-3"></div>
-      <div class="col-sm-6">
-        <form action="">
-          <label for="select">Select Size</label>
-          <select class="browser-default custom-select custom-select-md mb-3">
-            <option value="large">Large -- sh. 1000</option>
-            <option value="medium">Medium -- sh. 800</option>
-            <option value="small">Small -- sh. 500</option>
-          </select>
-          <button type="submit" class="btn btn-orange">Proceed</button>
-        </form>
+      <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+            <form action="">
+                <label for="select">Select Your Flavor</label>
+                <select class="browser-default custom-select custom-select-md mb-3">
+                  <option value="1">Chicken Tikka</option>
+                  <option value="2">PeriPeri Pizza</option>
+                  <option value="3">Raspberry Dessert Pizza</option>
+                  <option value="4">Chicken Alfredo Pizza</option>
+                  <option value="5">Sunchoke Pizza</option>
+                  <option value="6">Buffalo Chicken Pizza Sticks</option>
+                </select>
+              <label for="select">Select Size</label>
+              <select class="browser-default custom-select custom-select-md mb-3">
+                <option value="large">Large -- sh. 1000</option>
+                <option value="medium">Medium -- sh. 800</option>
+                <option value="small">Small -- sh. 500</option>
+              </select>
+              <label for="crust">Choose your favorite Crust!</label>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="crispy" name="crust">
+                <label class="custom-control-label" for="crispy">Crispy</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="crust" name="crust">
+                <label class="custom-control-label" for="crust">Stuffed</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="gluten-free" name="crust">
+                <label class="custom-control-label" for="gluten-free">Gluten-free</label>
+              </div> 
+              <label for="Toppings">Select Your Toppings</label>
+              
+              <button type="submit" class="btn btn-orange">Proceed</button>
+            </form>
+          </div>
+          <div class="col-sm-2"></div>
       </div>
-      <div class="col-sm-3"></div>
-     
     </div>
   </div>
  
