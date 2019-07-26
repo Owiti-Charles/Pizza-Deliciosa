@@ -27,7 +27,7 @@
                   <a class="nav-link" href="#about_us">About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Our Varieties</a>
+                  <a class="nav-link" href="#variety">Our Varieties</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Contact Us</a>
@@ -41,7 +41,7 @@
                 <div class="col-md-12 mb-4 white-text text-center text">
                   <h1 class="h1-reponsive gold-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 pulse"><strong>Pizza Deliciosa</strong></h1>
                   <h5 class="text-uppercase mb-4 gold-text floater"><strong>Best Pizza Shop in Town!</strong></h5>
-                  <a class="btn btn-green button floater" >Order Now!</a>
+                  <a class="btn btn-orange button floater" href="#make-order">  Order Now!</a>
                 </div>
               </div>
             </div>
@@ -53,8 +53,10 @@
   
   <div class="controls-top text-center" id="about_us"> 
       <h2>About Us</h2>
-    </div>
-    <div class="container-fluid section" id="about-us">
+  </div>
+
+
+  <div class="container-fluid section" id="about-us">
       <div class="col-sm-12 d-flex flex-xs-column">
         <div class="col-sm-7 img text-center about-img">
             <div class="about-pic">
@@ -71,9 +73,10 @@
           </div>
         </div>
       </div>
-    </div>
+  </div>
 
-  <div class="container carousel slide carousel-multi-item" data-ride="carousel">
+
+  <div class="container carousel slide carousel-multi-item" data-ride="carousel" id="variety">
     <div class="controls-top "> 
       <h2>Our Varieties</h2>
     </div>
@@ -128,14 +131,16 @@
           <div class="card mb-2">
             <img class="card-img-top" src="images/pizza6.jpg" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title"> Buffalo Chicken Pizza Sticks</h5>
+              <h5 class="card-title"> Buffalo Chicken Sticks</h5>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="container-fluid order">
+
+
+  <div class="container-fluid order" id="make-order">
     <div class="order-overlay">
       <div class="controls-top text-center" id="Order-now"> 
         <h2>Order Here</h2>
@@ -152,7 +157,7 @@
                   <option value="3">Raspberry Dessert Pizza</option>
                   <option value="4">Chicken Alfredo Pizza</option>
                   <option value="5">Sunchoke Pizza</option>
-                  <option value="6">Buffalo Chicken Pizza Sticks</option>
+                  <option value="6">Buffalo Chicken Sticks</option>
                 </select>
               <label for="select">Select Size</label>
               <select class="browser-default custom-select custom-select-md mb-3">
@@ -161,20 +166,17 @@
                 <option value="small">Small -- sh. 500</option>
               </select>
               <label for="crust">Choose your favorite Crust!</label>
-              <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="crispy" name="crust">
-                <label class="custom-control-label" for="crispy">Crispy</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="crust" name="crust">
-                <label class="custom-control-label" for="crust">Stuffed</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="gluten-free" name="crust">
-                <label class="custom-control-label" for="gluten-free">Gluten-free</label>
-              </div> 
+                <select class="browser-default custom-select custom-select-md mb-3">
+                  <option value="">Crispy -- sh. 200</option>
+                  <option value="medium">Stuffed -- sh. 250</option>
+                  <option value="small">Gluten-free-- sh. 180</option>
+                </select>
               <label for="Toppings">Select Your Toppings</label>
-              
+                <select class="browser-default custom-select custom-select-md mb-3">
+                  <option value="">Sausage -- sh. 80</option>
+                  <option value="medium">Bacon -- sh. 70</option>
+                  <option value="small">Mushrooms -- sh. 65</option>
+                </select>
               <button type="submit" class="btn btn-orange">Proceed</button>
             </form>
           </div>
