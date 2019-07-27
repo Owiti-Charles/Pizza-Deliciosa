@@ -1,4 +1,5 @@
 var price , crust_price, topping_price ;
+ 
 function Getpizza( name,size,crust,topping, total ){
   this.name = name;
   this.size = size;
@@ -6,7 +7,6 @@ function Getpizza( name,size,crust,topping, total ){
   this.topping = topping;
   this.total = total;
 }
-
 $(document).ready(function(){
   $("button.proceed").click(function(){
     $("button.proceed").hide();
@@ -30,16 +30,11 @@ $(document).ready(function(){
     }
   });
 
-  $("button.proceed").click(function(event){
+  $("button.proceed,button.addPizza").click(function(event){
    let pname = $(".name option:selected").val();
    let psize = $("#size option:selected").val();
    let pcrust = $("#crust option:selected").val();
    let ptopping = $("#topping option:selected").val();
-   
-   $("#pizzaname").append("Pizza Name - "+pname);
-   $("#pizzasize").append("Pizza size - "+psize);
-   $("#pizzacrust").append("Pizza Crust - "+pcrust);
-   $("#pizzatopping").append("Pizza Toppings - "+ptopping);
    switch(psize){
     case "large":
        price = 1200;
@@ -67,7 +62,7 @@ $(document).ready(function(){
       break;
       default:
         console.log("No price"); 
-   }
+    }
    switch(ptopping){
     case "Sausage":
       topping_price = 80;
@@ -80,20 +75,13 @@ $(document).ready(function(){
     break;
     default:
       console.log("No price"); 
- }
+    }
 
    let ptotal = price + crust_price + topping_price;
    console.log(ptotal);
-   $("#pizzatotal").append("Your Total is:  sh. "+ptotal);
-
-     var newOrder = new Getpizza(pname, psize, pcrust,ptopping,ptotal);
-  console.log(newOrder);
-  $(".name option:selected").val("");
-  $("#size option:selected").val("");
-  $("#crust option:selected").val("");
-  $("#topping option:selected").val("");
-  
-   
+   var newOrder = new Getpizza(pname, psize, pcrust,ptopping,ptotal);
+   $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
+   console.log(newOrder);   
    event.preventDefault();
   });
 
