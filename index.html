@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144351462-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-144351462-1');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pizza Deliciosa</title>
-  <link rel="icon" href="" type="image/x-icon">
+  <link rel="icon" href="images/pizza.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Cormorant|Eczar|El+Messiri|Itim|Sancreek|Wallpoet&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/mdb.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
@@ -53,7 +62,7 @@
     </div>
   </header>
   
-  <div class="controls-top text-center" id="about_us"> 
+  <!-- <div class="controls-top text-center" id="about_us"> 
       <h2>About Us</h2>
   </div>
 
@@ -75,7 +84,7 @@
           </div>
         </div>
       </div>
-  </div>
+  </div> -->
 
 
   <div class="container carousel slide carousel-multi-item" data-ride="carousel" id="variety">
@@ -186,27 +195,31 @@
             <div class="choise">
               <h2>Your Order is:</h2>
               <div id="your-orders">
-                <table class="table table-sm">
+                <table class="table table-sm  pizzatable">
                   <thead>
                     <tr>
                       <th scope="col">Name</th>
                       <th scope="col">Size</th>
                       <th scope="col">Crust</th>
                       <th scope="col">Topping</th>
+                      <th scope="col">Total</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="ordersmade">
                     <tr>
                       <td id="pizzaname"></td>
                       <td id="pizzasize"></td>
                       <td id="pizzacrust"></td>
                       <td id="pizzatopping"></td>
+                      <td id="totals"></td>
                     </tr>                  
                   </tbody>
                 </table>
-                <p id="pizzatotal"></p> 
+                <p id="pizzatotal"></p>
+                <p id="totalbill"></p> 
               </div>
               <button class="btn btn-orange addPizza">Add Pizza</button>
+              <button class="btn btn-orange" id="checkout">Checkout</button>
               <button class="btn btn-orange deliver">Home delivery?</button>
             </div>
             <div class="delivery">

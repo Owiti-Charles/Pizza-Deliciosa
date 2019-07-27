@@ -1,4 +1,13 @@
 var price , crust_price, topping_price ;
+let checkoutTotal =0;
+let total = 0;
+function Getpizza( name,size,crust,topping, total ){
+  this.name = name;
+  this.size = size;
+  this.crust = crust;
+  this.topping = topping;
+  this.total = total;
+}
 $(document).ready(function(){
   $("button.proceed").click(function(){
     $("button.proceed").hide();
@@ -50,24 +59,16 @@ $(document).ready(function(){
     default:
       console.log("No price"); 
     }
-    let total = price + crust_price + topping_price;
+    total = price + crust_price + topping_price;
     console.log(total);
-    let checkoutTotal =0;
-  
-    
+
     $("#pizzaname").html($(".name option:selected").val());
     $("#pizzasize").html( $("#size option:selected").val());
     $("#pizzacrust").html($("#crust option:selected").val());
     $("#pizzatopping").html($("#topping option:selected").val())
     $("#totals").html(total);
     
-    function Getpizza( name,size,crust,topping, total ){
-      this.name = name;
-      this.size = size;
-      this.crust = crust;
-      this.topping = topping;
-      this.total = total;
-    }
+
     $("button.addPizza").click(function(){
       let pname = $(".name option:selected").val();
       let psize = $("#size option:selected").val();
@@ -155,3 +156,6 @@ $(document).ready(function(){
    event.preventDefault();
   });
 });
+
+
+joflix
