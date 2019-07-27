@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pizza Deliciosa</title>
+  <link rel="icon" href="" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Cormorant|Eczar|El+Messiri|Itim|Sancreek|Wallpoet&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/mdb.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/wickedcss.min.css">
@@ -147,7 +149,7 @@
       </div>
       <h2>Order your pizza here and we will deliver it to you!</h2>
       <div class="row">
-          <div class="col-sm-8">
+          <div class="col-sm-6">
             <form action="">
                 <label for="select">Select Your Flavor</label>
                 <select class="browser-default custom-select custom-select-md mb-3 name">
@@ -166,7 +168,7 @@
               </select>
               <label for="crust">Choose your favorite Crust!</label>
                 <select class="browser-default custom-select custom-select-md mb-3" id="crust">
-                  <option value="Stuffed">Crispy -- sh. 200</option>
+                  <option value="Crispy">Crispy -- sh. 200</option>
                   <option value="Stuffed">Stuffed -- sh. 250</option>
                   <option value="Gluten-free">Gluten-free-- sh. 180</option>
                 </select>
@@ -180,7 +182,7 @@
               
             </form>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-6">
             <div class="choise">
               <h2>Your Order is:</h2>
               <div id="your-orders">
@@ -188,9 +190,19 @@
                 <p id="pizzasize"></p>
                 <p id="pizzacrust"></p>
                 <p id="pizzatopping"></p> 
-                
+                <p id="pizzatotal"></p> 
+              </div>
+              <button class="btn btn-orange checkout">checkout</button>
+              <div class="delivery">
+                <form action="">
+                  <div class="form-group">
+                    <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+                    <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number">
+                  </div>
+                </form>
               </div>
             </div>
+            
           </div>
       </div>
     </div>
