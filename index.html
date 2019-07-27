@@ -186,13 +186,27 @@
             <div class="choise">
               <h2>Your Order is:</h2>
               <div id="your-orders">
-                <p id="pizzaname"></p>
-                <p id="pizzasize"></p>
-                <p id="pizzacrust"></p>
-                <p id="pizzatopping"></p> 
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Size</th>
+                      <th scope="col">Crust</th>
+                      <th scope="col">Topping</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td id="pizzaname"></td>
+                      <td id="pizzasize"></td>
+                      <td id="pizzacrust"></td>
+                      <td id="pizzatopping"></td>
+                    </tr>                  
+                  </tbody>
+                </table>
                 <p id="pizzatotal"></p> 
               </div>
-              <!-- <button class="btn btn-orange checkout">Checkout</button> -->
+              <button class="btn btn-orange addPizza">Add Pizza</button>
               <button class="btn btn-orange deliver">Home delivery?</button>
             </div>
             <div class="delivery">
@@ -212,6 +226,9 @@
 
       </div>
     </div>
+  </div>
+  <div class="container">
+      
   </div>
  
   <script src="js/mdb.min.js"></script>
