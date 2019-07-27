@@ -12,24 +12,6 @@ $(document).ready(function(){
     $("button.proceed").hide();
     $("div.choise").show();
   });
-
-  $("button.deliver").click(function(){
-    $("button.deliver").hide();
-    $(".delivery").show();
-  });
-  $("button#final-order").click(function(){
-    let person = $("input#name").val();
-    let phone = $("input#phone").val();
-    let location = $("input#location").val();
-    if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
-
-      $("#delivery-message").append(person+" We have recieved your order and it will be delivered to "+location);
-    }
-    else {
-      alert("Please fill in the details for delivery!");
-    }
-  });
-
   $("button.proceed,button.addPizza").click(function(event){
    let pname = $(".name option:selected").val();
    let psize = $("#size option:selected").val();
@@ -77,16 +59,43 @@ $(document).ready(function(){
       console.log("No price"); 
     }
 
-   let ptotal = price + crust_price + topping_price;
-   console.log(ptotal);
-   var newOrder = new Getpizza(pname, psize, pcrust,ptopping,ptotal);
-   $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
-   console.log(newOrder);   
+    let total = price + crust_price + topping_price;
+    console.log(total);
+    let checkoutTotal =0;
+    checkoutTotal = checkoutTotal + total;
+    console.log(checkoutTotal);
+    var newOrder = new Getpizza(pname, psize, pcrust,ptopping,total);
+    $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
+    console.log(newOrder); 
+    
+
+    $("button#checkout").click(function(){
+      $("button#checkout").hide();
+      $("button.addPizza").hide();
+      $("button.deliver").show();
+      checkoutTotal  = total;
+      console.log(checkoutTotal);
+      $("#pizzatotal").append("Your bill is: "+checkoutTotal);
+    });
+    $("button.deliver").click(function(){
+      $(".pizzatable").hide();
+      $(".delivery").show();
+      $("button.deliver").hide();
+    });
+    $("button#final-order").click(function(){
+      let deliceryamount= checkoutTotal+200;
+      console.log("Final Bill is: "+deliceryamount); 
+      let person = $("input#name").val();
+      let phone = $("input#phone").val();
+      let location = $("input#location").val();
+      if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
+  
+        $("#delivery-message").append(person+" We have recieved your order and it will be delivered to "+location);
+      }
+      else {
+        alert("Please fill in the details for delivery!");
+      }
+    });
    event.preventDefault();
   });
-
-  
-
-
-
 });
