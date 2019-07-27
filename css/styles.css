@@ -3,13 +3,13 @@ html,body,header,
   overflow-x: hidden;
   height: 100%;
   scroll-behavior: smooth;
+  font-family: 'Eczar', serif;
   
 }
 body{
   margin: 0;
   padding: 0;
 }
-@import url('https://fonts.googleapis.com/css?family=Cormorant|Eagle+Lake|El+Messiri|Quattrocento&display=swap');
 @media (max-width: 740px) {
   body,
   header,
@@ -21,7 +21,7 @@ h1 {
   letter-spacing: 8px;
   color: rgb(255, 188, 2);
   font-weight: bolder;
-  font-family: 'Cormorant', serif;
+  font-family: 'Wallpoet', cursive;
   font-size: 60px;
   text-shadow: 2px 2px 5px rgb(8, 156, 5);
 }
@@ -169,6 +169,16 @@ nav .navbar{
 }
 .choise{
   display: none;
+  padding-left: 20%;
+}
+.delivery{
+  display: none;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.choise h2{
+  color:orange;
+  text-align: left;
 }
 #your-orders{
   color: white;
