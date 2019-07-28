@@ -192,6 +192,15 @@ td,th{
 #contact h2{
   text-align: center;
 }
+#contact{
+  color: black;
+}
+#contactdetails h2{
+  text-align: left;
+}
+.footer{
+  padding-top: 5%;
+}
 
 @media only screen and (max-width: 485px){
   .flex-xs-column {
