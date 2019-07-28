@@ -8,6 +8,8 @@ function Getpizza( name,size,crust,topping, total ){
   this.topping = topping;
   this.total = total;
 }
+
+// proceed button
 $(document).ready(function(){
   $("button.proceed").click(function(){
     $("button.proceed").hide();
@@ -68,7 +70,7 @@ $(document).ready(function(){
     $("#pizzatopping").html($("#topping option:selected").val())
     $("#totals").html(total);
     
-
+// Add pizza button
     $("button.addPizza").click(function(){
       let pname = $(".name option:selected").val();
       let psize = $("#size option:selected").val();
@@ -118,39 +120,57 @@ $(document).ready(function(){
        let total = price + crust_price + topping_price;
       
       var newOrder = new Getpizza(pname, psize, pcrust,ptopping,total);
+
       $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
       console.log(newOrder);
       checkoutTotal = checkoutTotal + total;
+      console.log(checkoutTotal);
 
     });
+    // Checkout button
     $("button#checkout").click(function(){ 
       $("button#checkout").hide();
       $("button.addPizza").hide();
       $("button.deliver").show();
+      $("#addedprice").show();
       checkoutTotal = checkoutTotal + total;
       console.log(checkoutTotal);
       $("#pizzatotal").append("Your bill is: "+checkoutTotal);
     });
+
+    // home delivery button
     $("button.deliver").click(function(){
       $(".pizzatable").hide();
       $(".choise h2").hide();
       $(".delivery").show();
+      $("#addedprice").hide();
       $("button.deliver").hide();
+      $("#pizzatotal").hide();
+      let deliceryamount= checkoutTotal+150;
+      $("#totalbill").append("Your bill plus delivery fee is: "+deliceryamount);
     });
+
+    // when one clicks place order button
     $("button#final-order").click(function(){
       $("#pizzatotal").hide();
-      let deliceryamount= checkoutTotal+200;
+      $(".delivery").hide();
+      $("button#final-order").hide();
+      let deliceryamount= checkoutTotal+150;
       console.log("Final Bill is: "+deliceryamount);
-      $("#totalbill").append("Your bill plus delivery fee is: "+deliceryamount); 
       let person = $("input#name").val();
       let phone = $("input#phone").val();
       let location = $("input#location").val();
+
       if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
   
-        $("#delivery-message").append(person+" We have recieved your order and it will be delivered to "+location+ ". Prepare sh. "+deliceryamount);
+        $("#finallmessage").append(person+" We have recieved your order and it will be delivered to "+location+ ". Prepare sh. "+deliceryamount);
+        $("#totalbill").hide();
+        $("#finallmessage").show();
       }
       else {
         alert("Please fill in the details for delivery!");
+        $(".delivery").show();
+        $("button#final-order").show();
       }
     });
    event.preventDefault();
