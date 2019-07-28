@@ -151,7 +151,7 @@ nav .navbar{
   margin-left: 2%;
   margin-right: 2%;
   padding-bottom: 20px;
-  padding-left: 1%;
+  padding-left: 6%;
 }
 .choise{
   display: none;
@@ -197,9 +197,13 @@ td,th{
 #finallmessage{
   display: none;
   padding-top: 10%;
+  padding-right: 10%;
+  padding-left: 10%;
+  font-size: 28px;
 }
 #regards{
   text-align: center;
+  color: aliceblue;
 }
 #information{
   padding-top: 5%;
@@ -259,23 +263,8 @@ h1 {
 .iframe{
   width: 300px;
   margin-right: 5%;
+  margin-left: 10%;
 }
 
 }
-/* @media only screen and (max-width: 1025px){
-  h1 {
-    font-weight: bolder;
-    font-size: 80px;
-  }
-  .text h5{
-    font-size: 50px;
-    padding: 20px;
-  }
-  #head{
-    padding-top: 30%;
-  } 
-  .button{
-    font-size: 40px;
-  } 
 
-} */

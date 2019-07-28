@@ -66,7 +66,6 @@ $(document).ready(function(){
     $("#pizzasize").html( $("#size option:selected").val());
     $("#pizzacrust").html($("#crust option:selected").val());
     $("#pizzatopping").html(ptopping.join(", "));
-    // ($("#topping option:selected").val())
     $("#totals").html(total);
     
 // Add pizza button
@@ -74,7 +73,6 @@ $(document).ready(function(){
       let pname = $(".name option:selected").val();
       let psize = $("#size option:selected").val();
       let pcrust = $("#crust option:selected").val();
-      // let ptopping = $("#topping option:selected").val();
       let ptopping = [];
       $.each($("input[name='toppings']:checked"), function(){            
           ptopping.push($(this).val());
@@ -131,7 +129,6 @@ $(document).ready(function(){
       $("button.addPizza").hide();
       $("button.deliver").show();
       $("#addedprice").show();
-      // checkoutTotal = checkoutTotal + total;
       console.log("Your total bills is sh. "+checkoutTotal);
       $("#pizzatotal").append("Your bill is sh. "+checkoutTotal);
     });
