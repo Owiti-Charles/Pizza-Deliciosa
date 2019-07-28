@@ -182,12 +182,20 @@
                   <option value="Stuffed">Stuffed -- sh. 250</option>
                   <option value="Gluten-free">Gluten-free-- sh. 180</option>
                 </select>
-              <label for="Toppings">Select Your Toppings</label>
-                <select class="browser-default custom-select custom-select-md mb-3" id="topping">
-                  <option value="Sausage">Sausage -- sh. 80</option>
-                  <option value="Bacon">Bacon -- sh. 70</option>
-                  <option value="Mushrooms">Mushrooms -- sh. 65</option>
-                </select>
+              <label for="Toppings">Select Your Toppings for sh. 50 each</label><br>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
+                  <label class="custom-control-label" for="Sausage">Sausage</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="Bacon" value="Bacon" name="toppings">
+                  <label class="custom-control-label" for="Bacon">Bacon</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms" name="toppings">
+                  <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
+                </div>
+                <br>
               <button type="submit" class="btn btn-orange proceed">Proceed</button>
               
             </form>
@@ -236,10 +244,6 @@
                 </form>
               </div>
           </div>
-          <h2 id="delivery-message"></h2>
-      </div>
-      <div class="row">
-
       </div>
     </div>
   </div>

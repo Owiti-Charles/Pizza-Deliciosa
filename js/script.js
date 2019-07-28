@@ -9,6 +9,7 @@ function Getpizza( name,size,crust,topping, total ){
   this.total = total;
 }
 
+
 // proceed button
 $(document).ready(function(){
   $("button.proceed").click(function(){
@@ -19,7 +20,12 @@ $(document).ready(function(){
    let pname = $(".name option:selected").val();
    let psize = $("#size option:selected").val();
    let pcrust = $("#crust option:selected").val();
-   let ptopping = $("#topping option:selected").val();
+   let ptopping = [];
+   $.each($("input[name='toppings']:checked"), function(){            
+       ptopping.push($(this).val());
+   });
+   console.log(ptopping.join(", "));
+
    switch(psize){
     case "large":
        price = 1200;
@@ -48,26 +54,17 @@ $(document).ready(function(){
       default:
         console.log("No price"); 
     }
-   switch(ptopping){
-    case "Sausage":
-      topping_price = 80;
-    break;
-    case "Bacon":
-      topping_price = 70;
-    break;
-    case "Mushrooms":
-      topping_price = 65;
-    break;
-    default:
-      console.log("No price"); 
-    }
-    total = price + crust_price + topping_price;
+    let topping_value = ptopping.length*50;
+    console.log("toppins value" + topping_value);
+
+    total = price + crust_price + topping_value;
     console.log(total);
 
     $("#pizzaname").html($(".name option:selected").val());
     $("#pizzasize").html( $("#size option:selected").val());
     $("#pizzacrust").html($("#crust option:selected").val());
-    $("#pizzatopping").html($("#topping option:selected").val())
+    $("#pizzatopping").html(ptopping.join(", "));
+    // ($("#topping option:selected").val())
     $("#totals").html(total);
     
 // Add pizza button
@@ -75,7 +72,12 @@ $(document).ready(function(){
       let pname = $(".name option:selected").val();
       let psize = $("#size option:selected").val();
       let pcrust = $("#crust option:selected").val();
-      let ptopping = $("#topping option:selected").val();
+      // let ptopping = $("#topping option:selected").val();
+      let ptopping = [];
+      $.each($("input[name='toppings']:checked"), function(){            
+          ptopping.push($(this).val());
+      });
+      console.log(ptopping.join(", "));
       switch(psize){
         case "large":
            price = 1200;
@@ -104,20 +106,12 @@ $(document).ready(function(){
           default:
             console.log("No price"); 
         }
-       switch(ptopping){
-        case "Sausage":
-          topping_price = 80;
-        break;
-        case "Bacon":
-          topping_price = 70;
-        break;
-        case "Mushrooms":
-          topping_price = 65;
-        break;
-        default:
-          console.log("No price"); 
-        }
-       let total = price + crust_price + topping_price;
+        let topping_value = ptopping.length*50;
+        console.log("toppins value" + topping_value);
+    
+        total = price + crust_price + topping_value;
+        console.log(total);
+
       // constractor function
       var newOrder = new Getpizza(pname, psize, pcrust,ptopping,total);
 
@@ -152,7 +146,7 @@ $(document).ready(function(){
     });
 
     // when one clicks place order button
-    $("button#final-order").click(function(){
+    $("button#final-order").click(function(event){
       $("#pizzatotal").hide();
       $(".delivery").hide();
       $("button#final-order").hide();
