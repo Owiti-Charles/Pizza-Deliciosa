@@ -198,13 +198,16 @@ td,th{
   display: none;
   padding-top: 10%;
 }
-/* #information{
-  padding-top: 10%;
-  font-size: 24px;
+#regards{
+  text-align: center;
+}
+#information{
+  padding-top: 5%;
+  font-size: 22px;
   padding-right: 8%;
   padding-left: 5%;
   color: #ffa500;
-} */
+}
 @media only screen and (max-width: 485px){
   .flex-xs-column {
     flex-direction: column;
