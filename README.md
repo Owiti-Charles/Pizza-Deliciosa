@@ -9,10 +9,10 @@
 This is a web application for Pizza Deliciosa which is a pizza selling venture, that shows details about the services and diffent pizza they sell, their menu and also allows customers to order online for their preferred pizza depending on size, crust they need and also allows them to input a location which they would love the piza to be delivered to. 
 
 ## Screenshot
-/*<img src="https://raw.githubusercontent.com/Owiti-Charles/Delani-Studio/master/images/delanihome.png" width="900px" height="440px">*/
+<img src="https://raw.githubusercontent.com/Owiti-Charles/Pizza-Deliciosa/master/images/pizzashop.png" width="900px" height="440px">
 
 ## Live Page 
-https://Owiti-charles.github.io/Pizza-Deliciosa 
+<!-- https://Owiti-charles.github.io/Pizza-Deliciosa  -->
 
 
 ## Installation / Setup instruction
@@ -36,13 +36,19 @@ https://Owiti-charles.github.io/Pizza-Deliciosa
 ## BDD
 | Behaviour      | Input        | Output       |
 | :------------- | :----------: | -----------: |
-|  Enter your name  |   Owiti Charles |     |
-| Enter your Email Address  | mikeycharlesm7@gmail.com |   |
-| Enter your message or comment   |  I would love to work with you     |     |
-| Press Submit|     |Pop up "Owiti Charles , we have received your message. Thank you for reaching out to us.|
+|  Select pizza name  |   Chiken Tika |   Chicken Tika   |
+| Select piza size  | large, medium, small |  large  |
+| Select Crust   |  Either cripsy,stuffed or glutten-free  |     |
+| select toppings  |  check all the topppings you want     |     |
+| Press Proceed button |     | Table with your selections |
+| Press add pizza button |     | new selection added to the table|
+| Press Checkout |     | Your bill is ...  |
+| Press home delivery |     | form with dwlivery details |
+| press place order| | your order has been recieved message|
 
 ## Known Bugs
 
+* All toppings has the same price regardless of the pizza size
 
 ## Contact Information 
 
