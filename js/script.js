@@ -118,7 +118,7 @@ $(document).ready(function(){
           console.log("No price"); 
         }
        let total = price + crust_price + topping_price;
-      
+      // constractor function
       var newOrder = new Getpizza(pname, psize, pcrust,ptopping,total);
 
       $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
@@ -134,7 +134,7 @@ $(document).ready(function(){
       $("button.deliver").show();
       $("#addedprice").show();
       checkoutTotal = checkoutTotal + total;
-      console.log(checkoutTotal);
+      console.log("Your total bills is sh. "+checkoutTotal);
       $("#pizzatotal").append("Your bill is: "+checkoutTotal);
     });
 
@@ -147,6 +147,7 @@ $(document).ready(function(){
       $("button.deliver").hide();
       $("#pizzatotal").hide();
       let deliceryamount= checkoutTotal+150;
+      console.log("You will pay sh. "+deliceryamount+" on delivery");
       $("#totalbill").append("Your bill plus delivery fee is: "+deliceryamount);
     });
 
@@ -163,7 +164,7 @@ $(document).ready(function(){
 
       if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
   
-        $("#finallmessage").append(person+" We have recieved your order and it will be delivered to "+location+ ". Prepare sh. "+deliceryamount);
+        $("#finallmessage").append(person+", We have recieved your order and it will be delivered to you at "+location+ ". Prepare sh. "+deliceryamount);
         $("#totalbill").hide();
         $("#finallmessage").show();
       }
@@ -176,6 +177,3 @@ $(document).ready(function(){
    event.preventDefault();
   });
 });
-
-
-joflix
