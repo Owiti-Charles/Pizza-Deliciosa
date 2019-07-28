@@ -36,26 +36,19 @@ h5 {
   position: absolute;
   /* overflow-x: hidden; */
 }
-.hr-light {
-  border-top: 3px solid #fff;
-  width: 200px;
-}
 #head{
   padding-top: 10%;
 }
 nav .navbar{
-  /* overflow-x: hidden; */
   width: 99%;
   padding-right: 0px;
 }
 .navbar-brand{
-  margin-right: 20%;
+  margin-right: 30%;
   font-weight:800;
 }
 .nav-item a{
-  /* padding-right: 30px; */
-  padding-left: 30px;
-  /* padding: 10px; */
+  /* padding-right: 50px; */
   font-size: 20px;
   font-weight: 700;
 }
@@ -150,6 +143,9 @@ nav .navbar{
 .order h2{
   text-align: center;
 }
+#variety{
+  padding-top: 30px;
+}
 .order{
   background-attachment: fixed;
   background-image: url("../images/slider2.jpg");
@@ -191,6 +187,10 @@ td,th{
 #your-orders{
   color: white;
   font-size: 30px;
+}
+
+#contact h2{
+  text-align: center;
 }
 
 @media only screen and (max-width: 485px){
