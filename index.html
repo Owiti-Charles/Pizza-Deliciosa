@@ -159,7 +159,7 @@
       </div>
       <h2>Order your pizza here and we will deliver it to you!</h2>
       <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-5">
             <form action="">
                 <label for="select">Select Your Flavor</label>
                 <select class="browser-default custom-select custom-select-md mb-3 name">
@@ -179,10 +179,15 @@
               <label for="crust">Choose your favorite Crust!</label>
                 <select class="browser-default custom-select custom-select-md mb-3" id="crust">
                   <option value="Crispy">Crispy -- sh. 200</option>
-                  <option value="Stuffed">Stuffed -- sh. 250</option>
+                  <option value="Stuffed">Stuffed -- sh. 150</option>
                   <option value="Gluten-free">Gluten-free-- sh. 180</option>
                 </select>
-              <label for="Toppings">Select Your Toppings for sh. 50 each</label><br>
+              <label for="Toppings">Select Your Toppings</label>
+                <select class="browser-default custom-select custom-select-md mb-3" id="topping">
+                  <option value="Sausage">Sausage -- sh. 80</option>
+                  <option value="Bacon">Bacon -- sh. 70</option>
+                  <option value="Mushrooms">Mushrooms -- sh. 65</option>
+                </select>
                 <div class="custom-control custom-checkbox custom-control-inline">
                   <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
                   <label class="custom-control-label" for="Sausage">Sausage</label>
@@ -200,7 +205,7 @@
               
             </form>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-7">
             <div class="choise">
               <h2>Your Order is:</h2>
               <div id="your-orders">

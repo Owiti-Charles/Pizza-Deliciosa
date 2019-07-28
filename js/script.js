@@ -1,5 +1,4 @@
 var price , crust_price, topping_price ;
-let checkoutTotal =0;
 let total = 0;
 function Getpizza( name,size,crust,topping, total ){
   this.name = name;
@@ -59,6 +58,8 @@ $(document).ready(function(){
 
     total = price + crust_price + topping_value;
     console.log(total);
+    let checkoutTotal =0;
+    checkoutTotal = checkoutTotal + total;
 
     $("#pizzaname").html($(".name option:selected").val());
     $("#pizzasize").html( $("#size option:selected").val());
@@ -98,7 +99,7 @@ $(document).ready(function(){
             crust_price = 200;
           break;
           case "Stuffed":
-            crust_price = 250;
+            crust_price = 150;
           break;
           case "Gluten-free":
             crust_price = 180;
@@ -112,13 +113,15 @@ $(document).ready(function(){
         total = price + crust_price + topping_value;
         console.log(total);
 
+        checkoutTotal = checkoutTotal + total;
+        console.log(checkoutTotal);
       // constractor function
       var newOrder = new Getpizza(pname, psize, pcrust,ptopping,total);
 
       $("#ordersmade").append('<tr><td id="pizzaname">'+newOrder.name +'</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">'+newOrder.crust + '</td><td id="pizzatopping">'+newOrder.topping+'</td><td id="totals">'+newOrder.total+'</td></tr>');
       console.log(newOrder);
-      checkoutTotal = checkoutTotal + total;
-      console.log(checkoutTotal);
+      
+      
 
     });
     // Checkout button
@@ -127,9 +130,9 @@ $(document).ready(function(){
       $("button.addPizza").hide();
       $("button.deliver").show();
       $("#addedprice").show();
-      checkoutTotal = checkoutTotal + total;
+      // checkoutTotal = checkoutTotal + total;
       console.log("Your total bills is sh. "+checkoutTotal);
-      $("#pizzatotal").append("Your bill is: "+checkoutTotal);
+      $("#pizzatotal").append("Your bill is sh. "+checkoutTotal);
     });
 
     // home delivery button
