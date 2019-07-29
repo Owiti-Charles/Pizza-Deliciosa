@@ -148,6 +148,8 @@ $(document).ready(function(){
 
     // when one clicks place order button
     $("button#final-order").click(function(event){
+      event.preventDefault();
+
       $("#pizzatotal").hide();
       $(".delivery").hide();
       $("button#final-order").hide();
